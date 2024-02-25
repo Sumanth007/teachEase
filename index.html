@@ -117,7 +117,7 @@
                             </div>
                             <div class="col-2">
                                 <label class="label">State</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
+                                <div class="rs-select2 js-select-simple select">
                                 <select name="subject">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Karnataka</option>
@@ -153,7 +153,7 @@
                         </div>
                         
                         <br>
-                        <h4>Guardian Info:</h2>
+                        <h4>Guardian's Info:</h2>
                         <br>
 
                             <div class="row row-space">
@@ -189,7 +189,7 @@
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <label class="label">Guardian Consent</label>
+                                        <label class="label">'Guardian's Consent</label>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">Yes
                                                 <input type="radio"  name="gc" required>
@@ -228,7 +228,7 @@
                             </div>
                             <div class="col-2">
                                 <label class="label">Class</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
+                                <div class="rs-select2 js-select-simple select">
                                 <select name="subject">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Class 1</option>
@@ -244,22 +244,28 @@
 
                         <div class="row row-space">
                             <div class="col-2">
-                                <label class="label">State</label>
+                                <label class="label">Subjects</label>
                                 <div class="rs-select2 js-select-simple select">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Mysore</option>
-                                    <option>Bangalore</option>
-                                    <option>Delhi</option>
+                                <select name="subject" required>
+                                    <option disabled="disabled" selected="selected" >Choose option</option>
+                                    <option>Sub 1</option>
+                                    <option>Sub 2</option>
+                                    <option>Sub 3</option>
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
                             </div>
                             <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Zip Code</label>
-                                    <input class="input--style-4" type="text" name="Zip Code" placeholder="Pin Code" pattern="([1-9]{1}[0-9]{5}|[1-9]{1}[0-9]{3}\\s[0-9]{3})" required>
-                                </div>
+                                <label class="label">Optional Subjects</label>
+                                <div class="rs-select2 js-select-simple select">
+                                <select name="subject" required>
+                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option>Op_Sub 1</option>
+                                    <option>Op_Sub 2</option>
+                                    <option>Op_Sub 3</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
                             </div>
                         </div>
 
