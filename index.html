@@ -15,6 +15,8 @@
     <link href="v/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Font special for pages-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
     <!-- Vendor CSS-->
     <link href="v/select2/select2.min.css" rel="stylesheet" media="all">
@@ -88,7 +90,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" required>
+                                    <input class="input--style-4 phone" type="text"  name="phone" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" required>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +183,7 @@
                                 <div class="col-2">
                                     <div class="input-group">
                                         <label class="label">Guardian's Number</label>
-                                        <input class="input--style-4" type="text" name="phone" required>
+                                        <input class="input--style-4" type="text" id="phone1"  name="phone" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$" required>
                                     </div>
                                 </div>
                             </div>
@@ -245,12 +247,18 @@
                         <div class="row row-space">
                             <div class="col-2">
                                 <label class="label">Subjects</label>
-                                <div class="rs-select2 js-select-simple select">
-                                <select name="subject" required>
+                                <div class="rs-select2 js-select-simple select search">
+                                <select name="subject" multiple required>
                                     <option disabled="disabled" selected="selected" >Choose option</option>
                                     <option>Sub 1</option>
                                     <option>Sub 2</option>
                                     <option>Sub 3</option>
+                                    <option>Sub 4</option>
+                                    <option>Sub 5</option>
+                                    <option>Sub 6</option>
+                                    <option>Sub 7</option>
+                                    <option>Sub 8</option>
+
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -258,7 +266,7 @@
                             <div class="col-2">
                                 <label class="label">Optional Subjects</label>
                                 <div class="rs-select2 js-select-simple select">
-                                <select name="subject" required>
+                                <select name="subject" mulitple required>
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Op_Sub 1</option>
                                     <option>Op_Sub 2</option>
@@ -347,7 +355,19 @@
 
 
 
-
+    <script>
+        const phoneInputField = document.querySelector(".phone");
+        const phoneInput = window.intlTelInput(phoneInputField, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+        
+        const phoneInputField1 = document.querySelector("#phone1");
+        const phoneInput1 = window.intlTelInput(phoneInputField1, {
+          utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+      </script>
 </body>
 
 </html>
